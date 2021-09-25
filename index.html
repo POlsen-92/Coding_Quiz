@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav> <!--Going to include link to highscore and timer. This will remain visible -->
+        <div id="scoreLink"><button>View HighScores</button></div> <!--On click will make scores visible while hiding everything else-->
+        <div id="timer">Time Left: <span id="countdown"></span></div> <!--Will count down from 90, decrease by 1 every second, decrease by 15 with every wrong answer and will stop after final question-->
+    </nav>
+    <main>
+        <div id="start-quiz"> <!--Demonstrates the start page for the quiz-->
+            <h1>Coding Quiz Challenge!</h1>
+            <section>
+                <p>Try To Answer All The Questions!</p>
+
+            </section>
+            <div><button id = "startbtn">Start Quiz</button></div>
+        </div>
+        <div id="questions"> <!--Questions for the user, will change with Javascript, after last question the timer will be stopped and logged as score-->
+            <h2>Question</h2>
+            <section>
+                <ol id = "answers">
+                    <li><button class="ansbtn" id="a1" ></button></li> <!--answer1-->
+                    <li><button class="ansbtn" id="a2"></button></li> <!--answer2-->
+                    <li><button class="ansbtn" id="a3"></button></li> <!--answer3-->
+                    <li><button class="ansbtn" id="a4"></button></li> <!--answer4-->
+                </ol>
+            </section>
+            <div><h5 id ="results"></h5></div>
+        </div>
+        <div id = "done"> <!--Quiz is completed-->
+            <h3>All Done!</h3>
+            <section>
+                <p>Your Score Is: <span id="score">0</span> </p>
+                <p>Enter Initials <input type="text" name="initials" id="initials"> <button id="submitbtn">Submit</button></p>
+            </section>
+            <div></div>
+        </div>
+        <div id = "scores"> <!---->
+            <h4>HighScores</h4>
+            <section>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </section>
+            <div>
+                <button id="backbtn">Go Back</button> 
+                <button id ="clearbtn">Clear High Score</button></div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./Assets/script.js"></script>
+</body>
+</html>
