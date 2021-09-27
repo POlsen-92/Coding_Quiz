@@ -1,0 +1,152 @@
+body {
+    background-color: beige;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    position: relative;
+}
+
+#scoreLink {
+    justify-content: flex-end;
+    align-self: center;
+    width: 90%;
+    margin-left: 10px;
+    
+}
+
+#scoreLink button {
+    background-color: blue; 
+    border-radius: 12px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#timer {
+    display: flex;
+    width: 10%;
+    align-items: flex-end;
+    text-align: right;
+    align-self: center;
+}
+
+#countdown {
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+
+}
+
+#start-quiz p {
+    
+}
+
+#startbtn {
+    background-color: blue; 
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+#answers {
+
+}
+
+.ansbtn {
+    background-color: blue; 
+    margin: 5px 0;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.results {
+
+}
+
+h3 {
+    font-size: 30px;
+}
+
+#done p {
+    
+}
+
+#score {
+
+}
+
+#initials {
+
+}
+
+h4 {
+
+}
+
+h5 {
+    font-size: 30px;
+}
+
+#hs {
+
+}
+
+#backbtn {
+    background-color: blue; 
+    border-radius: 12px;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+#clearbtn {
+    background-color: blue; 
+    border-radius: 12px;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

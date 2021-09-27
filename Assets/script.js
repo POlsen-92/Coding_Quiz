@@ -9,10 +9,15 @@ var a1 = document.getElementById('a1')
 var a2 = document.getElementById('a2')
 var a3 = document.getElementById('a3')
 var a4 = document.getElementById('a4')
-var results = document.getElementById('results')
+var score = document.getElementById('score')
+
+
+//Parts of webpage
+var results = document.querySelector('.results')
 var answers = document.getElementById('answers')
 var done = document.getElementById('done')
 var scores = document.getElementById('scores')
+
 
 //Access Button Elements
 var startbtn = document.querySelector("#startbtn")
@@ -27,29 +32,67 @@ var clearbtn = document.querySelector("#clearbtn")
     done.setAttribute("style", "display:none")
     scores.setAttribute("style", "display:none")
 
+//High Score Ranks
+var hs1 = document.getElementById("hs1")
+var hs2 = document.getElementById("hs2")
+var hs3 = document.getElementById("hs3")
+var hs4 = document.getElementById("hs4")
+
+
 var counter = 0 //question array counter
-var score;
-var secondsLeft = 90
+var secondsLeft = 90;
+var timerTrigger = true;
+var savedScore;
+var savedInitials;
  //
- 
+
+var addScores;
+
+var retrievedData = localStorage.getItem("highScore")
+
+if (retrievedData) {
+    addScores = true;
+}
+
+const highScoreArray = retrievedData ? JSON.parse(retrievedData) : [];
+
+renderHighScores()
+
+//TODO: If the timer makes it to zero at any question then the questions section will be hidden and the done section will appear with a score of 0. Will still ask for initials 
+
+
 function setTime() {
     // Sets interval in variable
     var timerInterval = setInterval(function() {
         if (secondsLeft > 0) {
             secondsLeft--;
             countdown.textContent = secondsLeft; //Updates written seconds left in page
+            if (timerTrigger === false) {
+                countdown.textContent = secondsLeft;
+                score.textContent = secondsLeft;
+                clearInterval(timerInterval)
+            }
         } else {
             // Stops execution of action at set interval
-            countdown.textContent = 0;
-            // score = 0;
+            timerTrigger = false;
+            secondsLeft = 0;
+            countdown.textContent = secondsLeft;
+            score.textContent = secondsLeft;
             clearInterval(timerInterval)
+            questions.setAttribute("style", "display:none")
+            questions.setAttribute("style", "display:none")
+            done.setAttribute("style", "display:none")
+            done.setAttribute("style", "display: ")
         }
     }, 1000);
 }
 //TODO: Add functionality to scoreLink which will result in showing "scores" div while hiding the rest. set attribute to change displays to hidden from initial.
 
 scoreLink.addEventListener("click", function() {
+    timerTrigger = false;
     startQuiz.setAttribute("style", "display:none")
+    questions.setAttribute("style", "display:none")
+    done.setAttribute("style", "display:none")
     scores.setAttribute("style", "display: ")
 })
 
@@ -62,6 +105,7 @@ scoreLink.addEventListener("click", function() {
 startbtn.addEventListener("click", function() {
     startQuiz.setAttribute("style", "display:none")
     questions.setAttribute("style", "display: ")
+    secondsLeft = 90;
     setTime();
     setQuestion();
 })
@@ -123,50 +167,84 @@ function setQuestion() {
 
 //Create a function that will compare the correct answer to the answer in the pushed button and if they are the same it will progress to the next question else it will give a text content of wrong and decrease the timer
 
+// TODO: On the last question when the correct answer is clicked the "questions" section will be hidden and "done" will be made visible. The timer will stop and the number that is left will be set as the score. 
+
 answers.addEventListener("click", function(event) {
     if (event.target.textContent === questionsArray[counter].correct){
         results.textContent = "Correct";
         counter++;
         if (counter === questionsArray.length) {
+            timerTrigger = false;
             counter = 0;
             questions.setAttribute("style", "display:none")
             done.setAttribute("style", "display: ")
+            console.log(timerTrigger)
         } else {
         setQuestion()
         }
-    } else {
+    } else {//TODO:With the click of the wrong answer a "wrong!" notice will appear at the bottom of the box and 15 seconds will be removed from the timer
         results.textContent = "Wrong! Try Again"
+        secondsLeft -= 15;
     }
 })
 
 
-
-
-//TODO:With the click of the wrong answer a "wrong!" notice will appear at the bottom of the box and 15 seconds will be removed from the timer
-
-
-
-
-
-// TODO: On the last question when the correct answer is clicked the "questions" section will be hidden and "done" will be made visible. The timer will stop and the number that is left will be set as the score. 
-
-
-
-
-//TODO: If the timer makes it to zero at any question then the questions section will be hidden and the done section will appear with a score of 0. Will still ask for initials 
-
-
-
-
-
-
 // TODO: Once initials are input the highscores section will become visible and the all done section will be hidden. Top 5 Scores from prior games will be displayed with the highest score appearing at the top and the lowest appearing at the bottom
 
-subbtn.addEventListener("click", function() {
+console.log(highScoreArray)
+
+JSON.stringify(highScoreArray)
+
+var highScore = (savedScore, savedInitials) => {
+    return {
+        savedScore: savedScore,
+        savedInitials: savedInitials
+    }
+}
+
+subbtn.addEventListener("click", function(event) {
+    event.preventDefault()
+    addScores = true;
+
+    var initials = document.getElementById('initials').value;
+    var highScore = {
+        savedScore: secondsLeft,
+        savedInitials: initials.trim()
+    }
+
+    highScoreArray.push(highScore)
+    localStorage.setItem("highScore", JSON.stringify(highScoreArray));
     done.setAttribute("style", "display:none")
     scores.setAttribute("style", "display: ")
+    retrievedData = localStorage.getItem("highScore")
+    renderHighScores()
 })
 
+//TODO: Pull Array from local Storage, rank highscores and present in list
+
+function renderHighScores() {
+    if (addScores) {
+        var retrievedHighScore = JSON.parse(retrievedData)
+        retrievedHighScore.sort((a,b) => b.savedScore - a.savedScore)
+        if (retrievedHighScore[0]) {
+            hs1.textContent = `${retrievedHighScore[0].savedInitials} - ${retrievedHighScore[0].savedScore}`
+        }
+        if (retrievedHighScore[1]) {
+            hs2.textContent = `${retrievedHighScore[1].savedInitials} - ${retrievedHighScore[1].savedScore}`
+        }
+        if (retrievedHighScore[2]) {
+            hs3.textContent = `${retrievedHighScore[2].savedInitials} - ${retrievedHighScore[2].savedScore}`
+        }
+        if (retrievedHighScore[3]) {
+            hs4.textContent = `${retrievedHighScore[3].savedInitials} - ${retrievedHighScore[3].savedScore}`
+        }
+    } else {
+        hs1.textContent = ' ';
+        hs2.textContent = ' ';
+        hs3.textContent = ' ';
+        hs4.textContent = ' ';
+    }
+}
 
 
 
@@ -175,12 +253,26 @@ subbtn.addEventListener("click", function() {
 backbtn.addEventListener("click", function() {
     startQuiz.setAttribute("style", "display: ")
     scores.setAttribute("style", "display:none") 
+    secondsLeft = 90;
+    countdown.textContent = "";
+    timerTrigger = true;
+    document.getElementById('initials').value = '';
 })
+
 
 
 //TODO: Add functionality where clear highscore removes all high scores from the list
 
-
-
+clearbtn.addEventListener("click", function() {
+    localStorage.clear();
+    startQuiz.setAttribute("style", "display: ")
+    scores.setAttribute("style", "display:none") 
+    secondsLeft = 90;
+    countdown.textContent = "";
+    timerTrigger = true;
+    addScores = false;
+    renderHighScores();
+    document.getElementById('initials').value = '';
+})
 
 

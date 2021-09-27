@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./Assets/reset.css"> -->
     <link rel="stylesheet" href="./Assets/style.css">
-    <title>Document</title>
+    <title>Coding Quiz</title>
 </head>
 <body>
     <nav> <!--Going to include link to highscore and timer. This will remain visible -->
@@ -31,24 +32,24 @@
                     <li><button class="ansbtn" id="a4"></button></li> <!--answer4-->
                 </ol>
             </section>
-            <div><h5 id ="results"></h5></div>
+            <div class ="results"></div>
         </div>
         <div id = "done"> <!--Quiz is completed-->
             <h3>All Done!</h3>
             <section>
-                <p>Your Score Is: <span id="score">0</span> </p>
+                <p>Your Score Is: <span id="score"></span> </p>
                 <p>Enter Initials <input type="text" name="initials" id="initials"> <button id="submitbtn">Submit</button></p>
             </section>
-            <div></div>
+            <div class ="results"><h4></h4></div>
         </div>
         <div id = "scores"> <!---->
-            <h4>HighScores</h4>
+            <h5>HighScores</h5>
             <section>
-                <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ol id=hs>
+                    <li id="hs1"></li>
+                    <li id="hs2"></li>
+                    <li id="hs3"></li>
+                    <li id="hs4"></li>
                 </ol>
             </section>
             <div>
