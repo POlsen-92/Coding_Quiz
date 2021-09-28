@@ -1,6 +1,7 @@
 body {
     background-color: beige;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'Stick No Bills', sans-serif;
 }
 
 nav {
@@ -50,8 +51,9 @@ ol {
 }
 
 h1 {
-    font-size: 40px;
-
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 5px;
 }
 
 #start-quiz p {
@@ -73,10 +75,22 @@ h2 {
 }
 
 #answers {
+    display: flex;
+    /* background-color: aqua; */
+}
+
+#answers li {
+    align-items: center;
+    height: 60px;
+    /* background-color: blue; */
+    line-height: 1.5;
 
 }
 
 .ansbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: blue; 
     margin: 5px 0;
     border-radius: 12px;
@@ -94,7 +108,7 @@ h3 {
 }
 
 #done p {
-    
+    margin: auto;
 }
 
 #score {
@@ -102,7 +116,9 @@ h3 {
 }
 
 #initials {
-
+    height: 25px;
+    border-radius: 12px;
+    border-color: gray;
 }
 
 h4 {

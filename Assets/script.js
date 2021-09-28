@@ -114,44 +114,44 @@ startbtn.addEventListener("click", function() {
 
 var questionsArray = [
     {
-        question: "This is the first question",
-        a: "is",
-        b: "this",
-        c: "right",
-        d: "?",
-        correct: "right"
+        question: "Multiple Inheritance means",
+        a: "one class inheriting from more super classes",
+        b: "more classes inheriting from one super class",
+        c: "more classes inheriting from more super classes",
+        d: "None of the above",
+        correct: "one class inheriting from more super classes"
     },
     {
-        question: "This is the Second question",
-        a: "is",
-        b: "this",
-        c: "right",
-        d: "?",
-        correct: "this"
+        question: "Which statement is not true in java language?",
+        a: "A public member of a class can be accessed in all the packages.",
+        b: "A private member of a class cannot be accessed by the methods of the same class.",
+        c: "A private member of a class cannot be accessed from its derived class.",
+        d: "A protected member of a class can be accessed from its derived class.",
+        correct: "A private member of a class cannot be accessed by the methods of the same class."
     },
     {
-        question: "This is the Third question",
-        a: "is",
-        b: "this",
-        c: "right",
-        d: "?",
-        correct: "?"
+        question: "To prevent any method from overriding, we declare the method as,",
+        a: "static",
+        b: "const",
+        c: "final",
+        d: "abstract",
+        correct: "final"
     },
     {
-        question: "This is the Fourth question",
-        a: "is",
-        b: "this",
-        c: "right",
-        d: "?",
-        correct: "is"
+        question: "The fields in an interface are implicitly specified as",
+        a: "static only",
+        b: "protected",
+        c: "private",
+        d: "both static and final",
+        correct: "both static and final"
     },
     {
-        question: "This is the Fifth question",
-        a: "is",
-        b: "this",
-        c: "right",
-        d: "?",
-        correct: "this"
+        question: "Which of the following is not true?",
+        a: "An interface can extend another interface.",
+        b: "A class which is implementing an interface must implement all the methods of the interface.",
+        c: "An interface can implement another interface.",
+        d: "An interface is a solution for multiple inheritance in java.",
+        correct: "An interface can implement another interface."
     }
 ]
 
