@@ -54,6 +54,6 @@ THEN I can save my initials and my score
 
 The following photo shows the webpage in full however only portions of the screen will show in the actual webpage:
 
-![ScreenShot of My Program](./Assets/screenshot.png)
+![ScreenShot of My Program](./Assets/Screenshot.png)
 
 https://polsen-92.github.io/Coding_Quiz/
