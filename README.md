@@ -3,8 +3,6 @@
 ## Work Description
 <pre>
 
-128. Within the function I used a do..while loop in order to make sure the input was a number and between the
-
   For this project the goal was to create an interactive webpage which hosted a coding quiz with 5 questions.
 For each run of the quiz the user is given 90 seconds which appears at the top right of the screen. Once the
 user clicks the 'Start Quiz' button the first question pops up and the countdown begins at the top right. If
