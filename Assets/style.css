@@ -1,16 +1,20 @@
+/* Full Page Style */
+
 body {
     background-color: beige;
     font-size: 25px;
     font-family: 'Stick No Bills', sans-serif;
 }
 
+
+/* Upper Horizontal bar including the highscore button and countdown */
 nav {
     display: flex;
     height: 80px;
     position: relative;
 }
 
-#scoreLink {
+#scorebtn {
     justify-content: flex-end;
     align-self: center;
     width: 90%;
@@ -18,8 +22,8 @@ nav {
     
 }
 
-#scoreLink button {
-    background-color: blue; 
+#scorebtn button {
+    background-color: rgb(6, 99, 6); 
     border-radius: 12px;
     color: white;
     padding: 10px 20px;
@@ -34,10 +38,7 @@ nav {
     align-self: center;
 }
 
-#countdown {
-
-}
-
+/* Includes the heading "Coding Quiz Challenge" and sections called questions, done and scores */
 main {
     display: flex;
     flex-direction: column;
@@ -50,18 +51,16 @@ ol {
     align-items: center;
 }
 
+/* Includes First section */
 h1 {
     font-size: 50px;
     font-weight: 800;
     letter-spacing: 5px;
-}
-
-#start-quiz p {
-    
+    margin: 20px;
 }
 
 #startbtn {
-    background-color: blue; 
+    background-color: rgb(6, 99, 6); 
     font-size: 25px;
     font-weight: bold;
     border-radius: 12px;
@@ -91,7 +90,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: blue; 
+    background-color: rgb(6, 99, 6); 
     margin: 5px 0;
     border-radius: 12px;
     color: white;
@@ -99,20 +98,12 @@ h2 {
     text-align: center;
 }
 
-.results {
-
-}
-
 h3 {
     font-size: 30px;
 }
 
 #done p {
-    margin: auto;
-}
-
-#score {
-
+    margin: 10px;
 }
 
 #initials {
@@ -121,20 +112,21 @@ h3 {
     border-color: gray;
 }
 
-h4 {
-
-}
-
 h5 {
     font-size: 30px;
+    margin: 20px;
 }
 
 #hs {
+    margin: 20px;
+}
 
+#buttons {
+    margin-left: 40px;
 }
 
 #backbtn {
-    background-color: blue; 
+    background-color: rgb(6, 99, 6); 
     border-radius: 12px;
     color: white;
     padding: 15px 15px;
@@ -142,7 +134,7 @@ h5 {
 }
 
 #clearbtn {
-    background-color: blue; 
+    background-color: rgb(6, 99, 6); 
     border-radius: 12px;
     color: white;
     padding: 15px 15px;
