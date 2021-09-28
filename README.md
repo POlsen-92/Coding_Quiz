@@ -17,7 +17,8 @@ stakes of a game as this means reaching the end of the quiz could actually be di
 questions.
 
   Once all 5 questions are answered or if they run out of time before finishing the questions the screen will
-change to show their score and allow them to input their initials. The time left on the clock is what is going to be their score and once they hit submit they will see a list of the top 4 highscores from their browser.
+change to show their score and allow them to input their initials. The time left on the clock is what is going
+to be their score and once they hit submit they will see a list of the top 4 highscores from their browser.
 The buttons at the bottom give them the opportunity to return to the beginning of the quiz or the clear the
 high score which will also return them to the beginning of the quiz.
 
