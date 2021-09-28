@@ -69,21 +69,19 @@ h1 {
     text-align: center;
 }
 
+/* Question section */
 h2 {
     font-size: 30px;
 }
 
 #answers {
     display: flex;
-    /* background-color: aqua; */
 }
 
 #answers li {
     align-items: center;
     height: 60px;
-    /* background-color: blue; */
     line-height: 1.5;
-
 }
 
 .ansbtn {
@@ -98,6 +96,7 @@ h2 {
     text-align: center;
 }
 
+/* Done section which shows score and presents text box for initials */
 h3 {
     font-size: 30px;
 }
@@ -112,6 +111,7 @@ h3 {
     border-color: gray;
 }
 
+/* Scores sections which shows list of high scores and gives buttons to return to the start screen or clear the high score list */
 h5 {
     font-size: 30px;
     margin: 20px;

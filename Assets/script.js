@@ -23,26 +23,27 @@
     var backbtn = document.querySelector("#backbtn")
     var clearbtn = document.querySelector("#clearbtn")
 
-//Begin quiz with only the start quiz attribute appearing
-    startQuiz.setAttribute("style", "display: ")
-    questions.setAttribute("style", "display:none")
-    done.setAttribute("style", "display:none")
-    scores.setAttribute("style", "display:none")
-
-//High Score Ranks
+    
+    //High Score Ranks
     var hs1 = document.getElementById("hs1")
     var hs2 = document.getElementById("hs2")
     var hs3 = document.getElementById("hs3")
     var hs4 = document.getElementById("hs4")
-
-//Setting Needed Variables
+    
+    //Setting Needed Variables
     var counter = 0 //question array counter
     var secondsLeft = 90;
     var timerTrigger = true; 
     var savedScore;
     var savedInitials;
     var addScores;
- //
+    //
+
+//Begin quiz with only the start quiz attribute appearing
+        startQuiz.setAttribute("style", "display: ")
+        questions.setAttribute("style", "display:none")
+        done.setAttribute("style", "display:none")
+        scores.setAttribute("style", "display:none")
 
 
 var retrievedData = localStorage.getItem("highScore") //retrieves scores from local storage
