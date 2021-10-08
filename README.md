@@ -54,4 +54,23 @@ The following photo shows the webpage in full however only portions of the scree
 
 ![ScreenShot of My Program](./Assets/Screenshot.png)
 
-https://polsen-92.github.io/Coding_Quiz/
+## Credits
+Built with [Javascript](https://www.javascript.com/)
+
+Fonts from [Google Fonts](https://fonts.google.com/)
+
+Deployed with GitHub
+
+Link to the Deployed Site: [Coding Quiz](https://polsen-92.github.io/Coding_Quiz/)
+
+## License
+
+MIT license 
+Copyright © 2020
+
+## Creator
+
+<img src="./Assets/cover_photo.jpg" width="100px"> <br>
+Paige Olsen
+[Github](https://github.com/POlsen-92) ,
+[LinkedIn](https://www.linkedin.com/in/paige-olsen-2aba9685/)
